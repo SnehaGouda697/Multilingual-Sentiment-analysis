@@ -46,7 +46,7 @@ This project helps in understanding customer feedback, social media opinions, pr
 
 ## 📂 Project Structure
 
----
+```
 Multilingual-Sentiment-analysis
 │
 ├── dataset/
@@ -61,6 +61,8 @@ Multilingual-Sentiment-analysis
 ├── app.py
 ├── requirements.txt
 └── README.md
+```
+
 ---
 
 ## 🔄 Workflow
@@ -73,6 +75,7 @@ Multilingual-Sentiment-analysis
 6. Model Evaluation
 7. Sentiment Prediction
 
+---
 
 ## 🧪 Example
 
@@ -163,8 +166,10 @@ python app.py
 
 ## 👩‍💻 Author
 
-Sneha Gouda
+Sneha Gouda - 4AL22CG055
+Rashmi M - 4AL22CG049
 Computer Science & Design
+Alvas Institute of Engineering and Technology mijar
 AI / Machine Learning Enthusiast
 
 ---
@@ -182,10 +187,5 @@ This project is open-source and available under the MIT License.
 
 ---
 
-If you'd like, I can also:
 
-* Add **GitHub badges**
-* Make **resume-ready README**
-* Add **project screenshots**
 
-Just tell 👍
