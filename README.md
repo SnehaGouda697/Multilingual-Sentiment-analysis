@@ -167,22 +167,5 @@ This project is licensed under the MIT License.
 
 ---
 
-## ✅ Step 2: Save in VS Code
-- Open your project  
-- Open `README.md`  
-- Replace old content → **Paste this**  
-- Press **Ctrl + S**
-
----
-
-## ✅ Step 3: Commit & Push (VERY IMPORTANT)
-
-Run this in terminal inside your project folder:
-
-```bash
-git add README.md
-git commit -m "Updated professional README"
-git push origin main
-```
 
 
