@@ -27,10 +27,25 @@ class HybridSentimentModel:
     def predict(self, text):
         label, confidence = self.predict_xlmr(text)
 
-        # Hybrid logic (basic)
+        text_lower = text.lower()
+
+        # 🔹 Rule-based domain logic (EV specific)
+        if "battery" in text_lower:
+            if "bad" in text_lower or "poor" in text_lower:
+                return {"label": "negative", "confidence": confidence}
+            elif "good" in text_lower or "excellent" in text_lower:
+                return {"label": "positive", "confidence": confidence}
+
+        if "expensive" in text_lower or "costly" in text_lower:
+            return {"label": "negative", "confidence": confidence}
+
+        if "cheap" in text_lower or "affordable" in text_lower:
+            return {"label": "positive", "confidence": confidence}
+
+        # 🔹 Confidence fallback
         if confidence < 0.6:
-            # fallback logic (can extend later)
-            label = label  # placeholder
+            if "not" in text_lower:
+                return {"label": "negative", "confidence": confidence}
 
         return {
             "label": label,

@@ -1,0 +1,11 @@
+text,language,sentiment
+"I love this EV car",English,positive
+"Battery life is amazing",English,positive
+"This EV is too expensive",English,negative
+"Performance is average",English,neutral
+"Este coche eléctrico es bueno",Spanish,positive
+"Este coche es malo",Spanish,negative
+"Ce véhicule est incroyable",French,positive
+"Ce produit est mauvais",French,negative
+"मुझे यह EV पसंद है",Hindi,positive
+"यह कार बेकार है",Hindi,negative

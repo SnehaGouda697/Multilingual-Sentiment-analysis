@@ -1,3 +1,4 @@
+from fastapi.responses import HTMLResponse
 from fastapi import FastAPI
 from pydantic import BaseModel
 from model.hybrid_model import HybridSentimentModel
@@ -10,9 +11,10 @@ model = HybridSentimentModel()
 class InputText(BaseModel):
     text: str
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 def home():
-    return {"message": "EV Sentiment API Running"}
+    with open("frontened/index.html", "r",encoding="utf-8") as f:
+        return f.read()
 
 @app.post("/predict")
 def predict(data: InputText):

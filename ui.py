@@ -1,13 +1,16 @@
 import streamlit as st
 import requests
 
-st.title("EV Sentiment Analyzer")
+st.set_page_config(page_title="EV Sentiment Analyzer")
+
+st.title("🌍 EV Sentiment Analyzer")
+st.write("Analyze sentiment of Electric Vehicle reviews")
 
 text = st.text_area("Enter text")
 
 if st.button("Analyze"):
     if text.strip() == "":
-        st.warning("Enter some text")
+        st.warning("⚠️ Please enter some text")
     else:
         try:
             response = requests.post(
@@ -16,8 +19,18 @@ if st.button("Analyze"):
             )
 
             result = response.json()
+            label = result['label']
+            confidence = result['confidence']
 
-            st.success(f"Sentiment: {result['label']}")
-            st.info(f"Confidence: {result['confidence']}")
+            # 🎯 Colored output
+            if label == "positive":
+                st.success(f"😊 Positive")
+            elif label == "negative":
+                st.error(f"😡 Negative")
+            else:
+                st.warning(f"😐 Neutral")
+
+            st.info(f"Confidence: {confidence}")
+
         except:
-            st.error("Backend not running!")
+            st.error("❌ Backend not running! Start FastAPI server")

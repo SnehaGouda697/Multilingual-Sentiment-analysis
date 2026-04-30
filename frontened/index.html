@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EV Sentiment Analyzer</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #5a67d8;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .positive { color: green; }
+        .negative { color: red; }
+        .neutral { color: orange; }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🌍 EV Sentiment Analyzer</h1>
+
+    <textarea id="text" placeholder="Enter EV review..."></textarea><br>
+
+    <button onclick="analyze()">Analyze</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+async function analyze() {
+    const text = document.getElementById("text").value;
+
+    if (text.trim() === "") {
+        alert("Please enter text!");
+        return;
+    }
+
+    document.getElementById("result").innerHTML = "⏳ Analyzing...";
+
+    try {
+        const response = await fetch("/predict", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ text: text })
+        });
+
+        const data = await response.json();
+
+        let className = "";
+        if (data.label === "positive") className = "positive";
+        else if (data.label === "negative") className = "negative";
+        else className = "neutral";
+
+        document.getElementById("result").innerHTML =
+            `<span class="${className}">Sentiment: ${data.label}</span><br>
+             Confidence: ${data.confidence}`;
+
+    } catch (error) {
+        document.getElementById("result").innerHTML = "❌ Error connecting to backend";
+    }
+}
+</script>
+
+</body>
+</html>
