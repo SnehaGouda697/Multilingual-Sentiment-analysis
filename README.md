@@ -1,191 +1,187 @@
-# 🌍 Multilingual Sentiment Analysis
+# 🌍 Multilingual Sentiment Analysis for EV Brand Perception
 
 ## 📌 Project Overview
+This project focuses on **Multilingual Sentiment Analysis** to understand customer perception of **Electric Vehicle (EV) brands** across different languages.  
 
-Multilingual Sentiment Analysis is a Natural Language Processing (NLP) project that analyzes text written in multiple languages and classifies the sentiment as:
+It uses advanced **transformer-based models** to classify text into:
+- 😊 Positive  
+- 😐 Neutral  
+- 😡 Negative  
 
-* 😊 Positive
-* 😐 Neutral
-* 😡 Negative
-
-This project helps in understanding customer feedback, social media opinions, product reviews, and more across different languages.
+The system enables businesses to analyze **global customer feedback, reviews, and social media opinions** efficiently.
 
 ---
 
 ## 🎯 Objectives
-
-* Analyze text in multiple languages
-* Detect sentiment (Positive, Negative, Neutral)
-* Apply NLP and Machine Learning concepts
-* Build a real-world AI application
+- Analyze text in multiple languages  
+- Perform sentiment classification (Positive, Neutral, Negative)  
+- Apply NLP and Machine Learning techniques  
+- Build a real-world AI-based application  
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
+- 🌍 Multilingual Support  
+- 🤖 Transformer-based Predictions  
+- 📊 Text Preprocessing & Cleaning  
+- 🧠 NLP Techniques (Tokenization, Embeddings)  
+- ⚡ Fast and Scalable Inference  
 
-* 🌍 Supports Multiple Languages
-* 🤖 Machine Learning Based Prediction
-* 📊 Text Preprocessing & Cleaning
-* 🧠 NLP Techniques
-* ⚡ Fast Sentiment Prediction
+---
+
+## 🧠 Models Used
+- **mT5** – Main model for multilingual understanding  
+- **XLM-RoBERTa** – Optimized for fast inference  
+- **IndicBERT** – Supports regional Indian languages  
 
 ---
 
 ## 🛠️ Technologies Used
-
-* Python
-* Machine Learning
-* Natural Language Processing (NLP)
-* Pandas
-* NumPy
-* Scikit-learn
-* NLTK / SpaCy
-* Matplotlib (for visualization)
+- Python  
+- Machine Learning  
+- Natural Language Processing (NLP)  
+- Pandas, NumPy  
+- Scikit-learn  
+- NLTK / SpaCy  
+- Matplotlib  
 
 ---
 
 ## 📂 Project Structure
-
-```
-Multilingual-Sentiment-analysis
+Multilingual-Sentiment-analysis/
 │
 ├── dataset/
-│   └── multilingual_data.csv
+│ └── multilingual_data.csv
 │
 ├── notebooks/
-│   └── sentiment_analysis.ipynb
+│ └── sentiment_analysis.ipynb
 │
 ├── model/
-│   └── sentiment_model.pkl
+│ └── sentiment_model.pkl
 │
 ├── app.py
 ├── requirements.txt
 └── README.md
-```
+
 
 ---
 
-## 🔄 Workflow
+## ⚙️ Installation & Setup
 
-1. Data Collection
-2. Data Preprocessing
-3. Language Detection
-4. Feature Extraction
-5. Model Training
-6. Model Evaluation
-7. Sentiment Prediction
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/your-username/Multilingual-Sentiment-analysis.git
+cd Multilingual-Sentiment-analysis
+```
+### Step 2: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+### Step 3: Run the Application
+```bash
+python app.py
+```
+---
+
+🔄 Workflow
+Data Collection
+      |
+Data Preprocessing
+      |
+Language Detection
+      |  
+Feature Extraction
+      |
+Model Training
+      |
+Model Evaluation
+      |
+Sentiment Prediction
+
 
 ---
 
 ## 🧪 Example
 
-Input:
-
-```
-"I love this product"
-```
-
-Output:
-
-```
-Positive 😊
-```
-
-Input:
-
-```
-"Este producto es malo"
-```
-
-Output:
-
-```
-Negative 😡
+### Input:
+  ```bash
+    "I love this product"
+  ```
+### Output
+  ```bash
+   Positive 😊
+  ```
+### Input:
+  ```bash
+     "Este producto es malo"
+  ```
+### Output:
+```bash
+    Negative 😡
 ```
 
 ---
 
-## 📊 Dataset
+### 📊 Dataset
 
-The dataset contains:
-
-* Text
-* Language
-* Sentiment Label
-
-Example:
-
-| Text          | Language | Sentiment |
-| ------------- | -------- | --------- |
-| I love this   | English  | Positive  |
-| Me gusta esto | Spanish  | Positive  |
-| Je déteste    | French   | Negative  |
+The dataset includes:
+Text
+Language
+Sentiment Label
+Text	                                  Language	          Sentiment
+I love this	                            English	             Positive
+Me gusta esto	                          Spanish	             Positive
+Je déteste	                            French	             Negative
 
 ---
 
-## ▶️ How to Run
-
-### Step 1: Clone Repository
-
-```
-git clone https://github.com/your-username/Multilingual-Sentiment-analysis.git
-```
-
-### Step 2: Install Requirements
-
-```
-pip install -r requirements.txt
-```
-
-### Step 3: Run Project
-
-```
-python app.py
-```
+### 🎓 Learning Outcomes
+NLP Concepts
+Machine Learning Model Training
+Data Preprocessing Techniques
+Model Deployment Basics
+Real-world AI Application Development
 
 ---
 
-## 📈 Future Improvements
-
-* Add Deep Learning (LSTM, BERT)
-* Add Web Interface
-* Support More Languages
-* Deploy Model
-
----
-
-## 🎓 Learning Outcomes
-
-* NLP Concepts
-* Machine Learning Model Training
-* Data Preprocessing
-* Model Deployment
-* Real-World AI Project
-
----
-
-## 👩‍💻 Author
-
-Sneha Gouda - 4AL22CG055
-Rashmi M - 4AL22CG049
+### 👩‍💻 Authors
+Sneha D. Gouda (4AL22CG055)
+Rashmi M. (4AL22CG049)
 Computer Science & Design
-Alvas Institute of Engineering and Technology mijar
-AI / Machine Learning Enthusiast
+Alvas Institute of Engineering and Technology
 
 ---
 
-## ⭐ Contribute
+### ⭐ Contributing
 
 Contributions are welcome!
-Feel free to fork, improve, and submit pull requests.
+Feel free to fork the repository, make improvements, and submit a pull request.
 
 ---
 
-## 📜 License
+### 📜 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License.
+
 
 ---
 
+## ✅ Step 2: Save in VS Code
+- Open your project  
+- Open `README.md`  
+- Replace old content → **Paste this**  
+- Press **Ctrl + S**
+
+---
+
+## ✅ Step 3: Commit & Push (VERY IMPORTANT)
+
+Run this in terminal inside your project folder:
+
+```bash
+git add README.md
+git commit -m "Updated professional README"
+git push origin main
+```
 
 
