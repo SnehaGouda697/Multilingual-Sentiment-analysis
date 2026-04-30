@@ -48,6 +48,7 @@ The system enables businesses to analyze **global customer feedback, reviews, an
 ---
 
 ## 📂 Project Structure
+```bash
 Multilingual-Sentiment-analysis/
 │
 ├── dataset/
@@ -62,7 +63,7 @@ Multilingual-Sentiment-analysis/
 ├── app.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
